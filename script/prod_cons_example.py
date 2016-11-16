@@ -11,6 +11,7 @@ class Producer(threading.Thread):
 
         while True:
             producer.send(u'test', b'Test message from python-kafka-plugin.')
+            producer.flush()
             time.sleep(5)
 
 
