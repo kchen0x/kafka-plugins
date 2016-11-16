@@ -25,7 +25,7 @@ class Consumer(threading.Thread):
         consumer.subscribe(['test'])
 
         for message in consumer:
-            print ("Get:" + message)
+            print ("Get:" + str(message))
 
 
 def main():
