@@ -9,6 +9,7 @@ def main():
     	value_serializer=lambda v: json.dumps(v).encode('utf-8')
     	)
     producer.send('test', {'foo': 'bar'})
+    producer.flush()
 
 
 if __name__ == '__main__':
