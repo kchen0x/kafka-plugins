@@ -8,11 +8,9 @@ class Producer(threading.Thread):
 
     def run(self):
         producer = KafkaProducer(bootstrap_servers='localhost:9092')
-        message = "Test message from python-kafka-plugin."
 
         while True:
-            producer.send('test', message)
-            print("Sent:" + message)
+            producer.send(u'test', b'Test message from python-kafka-plugin.')
             time.sleep(5)
 
 
