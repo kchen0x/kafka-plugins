@@ -1,6 +1,6 @@
 echo "===Begin to set kafka test environment.==="
 
-export $KAFKA_HOME=/home/cloudera/opt/kafka_2.10-0.9.0.1
+export $KAFKA_HOME="/home/cloudera/opt/kafka_2.10-0.9.0.1"
 
 alias kafka-start-server="$KAFKA_HOME/bin/kafka-server-start.sh ./config/server.properties"
 alias kafka-topic-list="$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper localhost:2181"
