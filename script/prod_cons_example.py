@@ -12,7 +12,7 @@ class Producer(threading.Thread):
 
         while True:
             producer.send('test', message)
-            print("Sent:", message)
+            print("Sent:" + message)
             time.sleep(5)
 
 
@@ -21,11 +21,11 @@ class Consumer(threading.Thread):
 
     def run(self):
         consumer = KafkaConsumer(bootstrap_servers='localhost:9092',
-                                 auto_offset_reset='earliest')
+                                 auto_offset_reset='latest')
         consumer.subscribe(['test'])
 
         for message in consumer:
-            print (message)
+            print ("Get:" + message)
 
 
 def main():
@@ -41,9 +41,4 @@ def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        format='%(asctime)s.%(msecs)s:%(name)s:%(thread)d' +
-        ':%(levelname)s:%(process)d:%(message)s',
-        level=logging.INFO
-    )
     main()
