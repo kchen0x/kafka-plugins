@@ -2,8 +2,9 @@ This repo is for testing Kafka plugins.
 
 ## Preparation
 
-`kafka 0.9.0 +` installed.
-ZooKeeper is listenning on 2181 port.
+`kafka 0.9.0 +` installed([Download](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.0/kafka_2.11-0.10.1.0.tgz) 0.10.0 here and un-tar it).
+
+ZooKeeper is listenning on `2181` port.
 
 ## Get Test Environment
 
